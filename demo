@@ -1,0 +1,50 @@
+str=input().replace(" ","")
+s=sorted(list(set(str)))
+a=[]
+for i in s:
+    a.append((i,str.count(i)))
+print(a)
+
+
+
+n=int(input())
+for i in range(1,n+1):
+    x=0
+    for j in range(2,i+1):
+        x+=1
+        print("1",end=" ")
+    print(2**x)
+    print()
+
+
+
+n1=int(input())
+n2=int(input())
+n3=int(input())
+n4=int(input())
+a=[n1,n2,n3,n4]
+b=['B1','B2','B3','B4']
+n=int(input())
+flag=0
+sum=0
+for i in range(4):
+    sum=sum+a[i]
+    if (n<=sum):
+        print(b[i])
+        flag=1
+        break
+if(flag==0):
+    print('EXT')
+
+
+
+x=int(input())
+pol=list(map(int,input().split()))
+n=len(pol)
+result=0
+for i in range(n):
+    sum=pol[i]
+    for j in range(n-i-1):
+        sum=sum*x
+    result=result+sum
+print(result)
